@@ -33,7 +33,7 @@ class WC_Payment_Gateway_Payson_Checkout extends WC_Payment_Gateway
     $this->checkout_color_scheme = $this->get_option( 'checkout_color_scheme' );
     $this->checkout_customer_phone = $this->get_option( 'checkout_customer_phone' );
     $this->checkout_verification = $this->get_option( 'checkout_verification' );
-
+    
     add_action( "woocommerce_update_options_payment_gateways_{$this->id}", [ $this, "process_admin_options" ] );
     add_action( "wp_ajax_nopriv_payson_checkout", [ $this, "payment_fields" ] );
     add_action( "wp_ajax_payson_checkout", [ $this, "payment_fields" ] );

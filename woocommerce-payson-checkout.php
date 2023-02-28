@@ -32,6 +32,7 @@ class WooCommerce_Payson_Checkout
     load_plugin_textdomain( 'woocommerce-payson-checkout', false, dirname( plugin_basename( __FILE__ ) ) . "/languages/" );
 
     require_once "includes/class-wc-payment-gateway-payson-checkout.php";
+    new WC_Payment_Gateway_Payson_Checkout();
   }
 
   /**
